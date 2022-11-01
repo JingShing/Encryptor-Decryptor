@@ -124,9 +124,11 @@ class page_module(Frame):# I use page class to manage tkinter widget
     def import_set(self):# import spell book
         set_path = filedialog.askopenfilename()
         if set_path:
+            self.status = 'File'
             self.file_name = set_path.split('/')[-1]
             self.now_file_name.set(self.now_file_str + self.file_name)
             self.data = load_file(set_path)
+        self.set_label_text()
 
     def encrypt_file(self):
         if self.file_name != 'None' and len(self.data)>0:
@@ -134,6 +136,8 @@ class page_module(Frame):# I use page class to manage tkinter widget
             file_name = self.file_name.split('.')
             save_path = file_name[0] + '_en.' + file_name[-1]
             save_file(save_path, list_encrypt(self.data, key))
+            self.status = 'Done enc'
+        self.set_label_text()
 
     def decrypt_file(self):
         if self.file_name != 'None' and len(self.data)>0:
@@ -141,6 +145,8 @@ class page_module(Frame):# I use page class to manage tkinter widget
             file_name = self.file_name.split('.')
             save_path = file_name[0] + '_de.' + file_name[-1]
             save_file(save_path, list_decrypt(self.data, key))
+            self.status = 'Done dect'
+        self.set_label_text()
 
 main = Gui_helper_main()
 main.run()
