@@ -1,4 +1,4 @@
-English | [繁體中文](README_TCH)
+English | [繁體中文](README_TCH.md)
 # Encryptor-Decryptor
 A tool for encrypt and decrypt.
 
