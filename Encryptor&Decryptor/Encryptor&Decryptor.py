@@ -70,7 +70,7 @@ class Gui_helper_main:# I don't like to stuff all widget in main root so I use c
         self.frame_index = 0
         self.root.geometry('350x220')# main window size
         self.root.resizable(width=False, height=False)
-        self.root.title('Encryptor&Decryptor加解密工具')
+        self.root.title('Encryptor&Decryptor')
         self.root.protocol("WM_DELETE_WINDOW", self.quit)
         # maker info
         self.maker_name = Label(self.root, text="Maker : JingShing")
@@ -103,15 +103,15 @@ class page_module(Frame):# I use page class to manage tkinter widget
         self.now_file_str = 'Now file : '
         self.now_status_str = 'Now status : '
 
-        self.key_label = Label(self, text='Key密鑰')
+        self.key_label = Label(self, text='Key')
         self.key_label.grid(column=0, row=0, sticky=N+W)
         self.key_text = Text(self, width=40, height=5)# result text box
         self.key_text.grid(column=0, row=1, sticky=N+W, rowspan=7, columnspan=5)
-        self.import_button = Button(self, text='import導入', command=self.import_set)
+        self.import_button = Button(self, text='import', command=self.import_set)
         self.import_button.grid(column=0, row=9, sticky=N+W, pady=5)
-        self.decrycpt_button = Button(self, text='decrycpt解密', command=self.decrypt_file)
+        self.decrycpt_button = Button(self, text='decrycpt', command=self.decrypt_file)
         self.decrycpt_button.grid(column=1, row=9, sticky=N+W, pady=5)
-        self.encrycpt_button = Button(self, text='encrycpt加密', command=self.encrypt_file)
+        self.encrycpt_button = Button(self, text='encrycpt', command=self.encrypt_file)
         self.encrycpt_button.grid(column=2, row=9, sticky=N+W, pady=5)
 
         self.now_file_name = StringVar()
