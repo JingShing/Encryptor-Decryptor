@@ -2,6 +2,8 @@
 # Encryptor-Decryptor加解密工具
 一個協助加解密的工具。
 
+# [教學影片](https://youtu.be/TyIL7XjMUaw?t=180)
+
 # 使用教學
 * 導入檔案
 * 將金鑰放到文字框
