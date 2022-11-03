@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter.ttk import *
 from tkinter import filedialog
+
 # save and load
 def save_file(path, data):
     with open(path, 'w', encoding="utf-8") as f:
@@ -61,14 +62,16 @@ def list_decrypt(data, key):
 class Gui_helper_main:# I don't like to stuff all widget in main root so I use class to manage class and root.
     def __init__(self):
         self.root = Tk()
+        self.root.config(bg='#FAFBFC')
         self.frame = None
         self.frame_index = 0
-        self.root.geometry('350x200')# main window size
+        self.root.geometry('350x220')# main window size
+        self.root.resizable(width=False, height=False)
         self.root.title('Encryptor&Decryptor')
         self.root.protocol("WM_DELETE_WINDOW", self.quit)
         # maker info
         self.maker_name = Label(self.root, text="Maker : JingShing")
-        self.maker_name.grid(column=0, row=3, sticky=N+W)
+        self.maker_name.grid(column=0, row=3, sticky=N+W, padx=(5, 0))
         
         self.frames = [page_module(self)]
         self.switch_frame(0)
@@ -78,7 +81,7 @@ class Gui_helper_main:# I don't like to stuff all widget in main root so I use c
             self.frame.grid_forget()
         self.frame_index = index
         self.frame = self.frames[self.frame_index]
-        self.frame.grid(column=0, row=0, sticky=N+W)
+        self.frame.grid(column=0, row=0, sticky=N+W, padx=(5, 0))
 
     def run(self):# run the mainloop
         self.root.mainloop()
@@ -102,11 +105,11 @@ class page_module(Frame):# I use page class to manage tkinter widget
         self.key_text = Text(self, width=40, height=5)# result text box
         self.key_text.grid(column=0, row=1, sticky=N+W, rowspan=7, columnspan=5)
         self.import_button = Button(self, text='import', command=self.import_set)
-        self.import_button.grid(column=0, row=9, sticky=N+W)
+        self.import_button.grid(column=0, row=9, sticky=N+W, pady=5)
         self.decrycpt_button = Button(self, text='decrycpt', command=self.decrypt_file)
-        self.decrycpt_button.grid(column=1, row=9, sticky=N+W)
+        self.decrycpt_button.grid(column=1, row=9, sticky=N+W, pady=5)
         self.encrycpt_button = Button(self, text='encrycpt', command=self.encrypt_file)
-        self.encrycpt_button.grid(column=2, row=9, sticky=N+W)
+        self.encrycpt_button.grid(column=2, row=9, sticky=N+W, pady=5)
 
         self.now_file_name = StringVar()
         self.now_file = Label(self, textvariable=self.now_file_name)
