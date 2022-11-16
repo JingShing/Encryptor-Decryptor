@@ -20,3 +20,6 @@ A tool for encrypt and decrypt.
 
 ## After encrypt and After decrypt
 ![test encrypt](image/test_word_en_de.png)
+
+## Principle
+It combines the key and the line you want to encrypt. And then turned it into base64 format.
