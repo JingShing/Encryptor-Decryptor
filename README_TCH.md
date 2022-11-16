@@ -20,3 +20,7 @@
 
 ## 解密加密後的檔案
 ![test encrypt](image/test_word_en_de.png)
+
+
+## 原理
+結合密鑰和要加密的內容，將其轉換為base64的格式。
