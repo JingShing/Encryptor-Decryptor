@@ -1,5 +1,6 @@
 [English](README.md) | 繁體中文
-
+# [線上工具](https://jingshing.com/encrypt_decrypt/)
+你可以在 [我的網站](https://jingshing.com/encrypt_decrypt/) 使用這個工具。
 # 更新
 我用 Html 和 javascript 重寫了這個加密和解密的工具，詳情可以 [看這篇 repo](https://github.com/JingShing/Encryptor-Decryptor-JS).
 
