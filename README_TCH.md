@@ -1,4 +1,9 @@
 [English](README.md) | 繁體中文
+
+# 更新
+我用 Html 和 javascript 重寫了這個加密和解密的工具，詳情可以 [看這篇 repo](https://github.com/JingShing/Encryptor-Decryptor-JS).
+
+它更加輕量化且方便使用了。直接以瀏覽器開啟便能使用。
 # Encryptor-Decryptor加解密工具
 一個協助加解密的工具。
 
