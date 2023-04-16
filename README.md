@@ -1,4 +1,9 @@
 English | [繁體中文](README_TCH.md)
+# Update
+I made a new version in html with javascript you can see [repo here](https://github.com/JingShing/Encryptor-Decryptor-JS).
+
+It is lighter and easier to use. With your browser it can easily encrypt and decrypt.
+
 # Encryptor-Decryptor
 A tool for encrypt and decrypt.
 
